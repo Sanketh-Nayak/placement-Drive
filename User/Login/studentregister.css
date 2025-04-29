@@ -1,0 +1,167 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .813rem;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, input, button, select {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: white; /* Make text white */
+  background: none;
+  outline: none;
+  border: none;
+}
+
+a { text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.login__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.login__form {
+  position: relative;
+  margin-inline: 1.5rem;
+  background-color: hsla(0, 0%, 100%, .01);
+  border: 2px solid hsla(0, 1%, 66%, 0.7);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(16px);
+}
+
+.login__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.login__inputs, .login__box {
+  display: grid;
+}
+
+.login__inputs {
+  row-gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.login__box {
+  grid-template-columns: 1fr max-content;
+  align-items: center;
+  border: 2px solid #f9f6f6f4;
+  padding-inline: 1.25rem;
+  border-radius: 4rem;
+  column-gap: .75rem;
+  height: 3.5rem;
+}
+
+/* Select Dropdown */
+/* Dropdown select styling */
+.login__select {
+  width: 100%;
+  padding: 1rem;
+  color: black; /* Text color always black */
+  background-color: white; /* Background white */
+  border-radius: 4rem;
+  appearance: none;
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  padding-right: 2.5rem; /* Space for arrow */
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="black" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+}
+
+/* Remove default blue highlight on focus */
+.login__select:focus {
+  outline: none;
+  border: 2px solid #0b8204; /* Optional: green border on focus */
+}
+
+/* Styling the options inside dropdown */
+.login__select option {
+  color: black; /* Text color inside dropdown */
+  background-color: white; /* Background color */
+}
+
+/* Hover effect inside dropdown for options */
+.login__select option:hover {
+  background-color: blue; /* Blue background on hover */
+  color: white; /* White text when hovered */
+}
+
+/* Optional: when dropdown is opened, keep border color */
+.login__select:active {
+  border: 2px solid #0b8204;
+}
+
+
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: var(--white-color);
+  border-radius: 4rem;
+  color: var(--black-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.login__button:hover {
+  background-color: #0b8204;
+  color: white;
+}
+
+/* Check styling */
+.login__check {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--small-font-size);
+}
+
+.login__check-input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--white-color);
+}
+
+/*=============== RESPONSIVE ===============*/
+@media screen and (min-width: 576px) {
+  .login { justify-content: center; }
+  .login__form { width: 400px; padding-inline: 2rem; }
+}

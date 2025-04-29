@@ -1,0 +1,11 @@
+
+
+CREATE TABLE companies (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    role VARCHAR(255) NOT NULL,
+    compnayType VARCHAR(255) NOT NULL,  
+    deadline DATE NOT NULL
+);
+ALTER TABLE companies ADD COLUMN company_url VARCHAR(255) NOT NULL;

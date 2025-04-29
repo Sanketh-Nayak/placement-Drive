@@ -1,0 +1,33 @@
+# Ignore uploads directory
+User/Dashboard/uploads/
+uploads/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore PHP files
+*.log
+*.cache
+*.tmp
+
+# Ignore environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore vendor directory if using composer
+/vendor/
+
+# Ignore node_modules if using npm
+/node_modules/
+
+# Ignore compiled files
+*.compiled.*
+*.min.* 

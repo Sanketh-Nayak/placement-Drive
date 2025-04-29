@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #1a73e8;
+    --sidebar-width: 250px;
+    --card-bg: #fff;
+    --hover-color: #f0f7ff;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    /* width: var(--sidebar-width); */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.logo h2 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.online-status {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+}
+
+.admin-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.admin-avatar i {
+    font-size: 5rem;
+    color: #666;
+}
+
+.admin-info .status {
+    color: #4CAF50;
+    font-size: 0.8rem;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    padding: 12px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li:hover {
+    background-color: var(--hover-color);
+}
+
+nav ul li.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+nav ul li i {
+    width: 20px;
+}
+
+/* Main Content Styles */
+.main-content { 
+    margin-left: auto;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding: 12px 20px;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.menu-item:hover{
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.menu-item.logout {
+    margin-top: auto;
+    color: #E4405F;
+}
+
+.menu-item.logout:hover {
+    background-color: #ffebee;
+}
+
+.user-profile {
+    display: flex;
+    gap: 20px;
+}
+
+.user-profile i {
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-info h3 {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.stat-info p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.stat-icon.blue {
+    color: var(--primary-color);
+    background-color: #e8f0fe;
+}
+
+.stat-icon.yellow {
+    color: #f4b400;
+    background-color: #fff8e1;
+}
+
+.stat-icon.green {
+    color: #0f9d58;
+    background-color: #e8f5e9;
+}
+
+.stat-icon.red {
+    color: #db4437;
+    background-color: #fbe9e7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h2 {
+        font-size: 1rem;
+    }
+
+    .stat-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .stat-info p {
+        font-size: 1.2rem;
+    }
+
+    .stat-icon {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+}
+
+
+/* Styles For Notification Count Near Bell Icon */
+.user-profile a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+}
+.notification-count {
+    color: white;		
+    background-color: red;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 0.7em;
+    font-weight: bold;
+}

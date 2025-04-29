@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Drive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('./Images/main.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    header {
+        background: rgba(34, 34, 34, 0.3); /* Lighter transparency */
+        backdrop-filter: blur(15px); /* Increased blur for better glass effect */
+        -webkit-backdrop-filter: blur(15px);
+        color: white;
+        padding: 30px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1); /* Even softer border */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            background: #242423;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a:hover {
+            background: #242423;
+            transform: scale(1.1);
+        }
+
+        .content {
+            text-align: center;
+            color:white;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgb(59, 59, 59);
+            margin-top: 50px;
+        }
+        /* Footer */
+        footer {
+    background: rgba(34, 34, 34, 0.3); /* More transparent */
+    backdrop-filter: blur(15px); /* Increased blur for a smoother glass effect */
+    -webkit-backdrop-filter: blur(15px);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    position: relative;
+    border-top: 2px solid rgba(255, 255, 255, 0.1); /* Softer border */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+        /* Social Media Icons (Simple Design) */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Different Colors for Each Icon */
+        .social-icons .facebook { background: #1877F2; } /* Facebook Blue */
+        .social-icons .twitter { background: #1DA1F2; } /* Twitter Blue */
+        .social-icons .instagram { background: #E4405F; } /* Instagram Pink */
+        .social-icons .linkedin { background: #0077B5; } /* LinkedIn Blue */
+
+        /* Hover Effect */
+        .social-icons a:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        🚀 Placement Drive 🚀
+    </header>
+
+    <nav>
+        <a href="Admin/Login/admin.php">Go to Admin Login</a>
+        <a href="./User/Login/student.php">Student Login</a>
+        <!-- <a href="./Company/Login/companylogin.html">Company Login</a> -->
+    </nav>
+
+    <div class="content">
+        Welcome to the Placement Drive Portal. Connect with top companies and start your career.
+    </div>
+
+    <footer>
+        &copy; 2025 Placement Drive
+        <div class="social-icons">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
