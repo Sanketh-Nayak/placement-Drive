@@ -1,9 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "admin_db");
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 // Pending Registration Count
 $sql = "SELECT COUNT(*) FROM reg_hist WHERE approval='pending'";

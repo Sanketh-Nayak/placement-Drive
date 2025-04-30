@@ -1,9 +1,6 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "admin_db");
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include 'db.php';
 
 // Fetch materials
 $sql = "SELECT * FROM materials ORDER BY title";

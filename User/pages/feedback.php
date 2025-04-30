@@ -135,7 +135,7 @@
 
     <div class="form-container">
         <h2>Provide Feedback</h2>
-        <form method="POST" action="http://localhost/Placement-/User/backend/send_feedback.php">
+        <form method="POST" action="../backend/send_feedback.php">
             <div class="form-group">
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" placeholder="Enter your message here..." ></textarea>

@@ -3,11 +3,7 @@
 <?php
 
 // Create connection
-$conn = new mysqli('localhost', "root", "", "admin_db");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 
 // Handle approval action
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"]) && isset($_POST["approval-action"])) {

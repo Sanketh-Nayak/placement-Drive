@@ -1,9 +1,6 @@
 <?php
 // Direct database connection
-$conn = mysqli_connect("localhost", "root", "", "admin_db");
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include './db.php';
 
 // Handle delete request
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {

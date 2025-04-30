@@ -106,10 +106,7 @@
         <div class="results-grid">
             <?php
             session_start();
-            $conn = @mysqli_connect('localhost','root','','admin_db');
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
+            include './db.php';
 
             $email = $_SESSION['Email'];
             $sql = "SELECT * FROM quiz_results WHERE email = '$email' ORDER BY submission_date DESC";

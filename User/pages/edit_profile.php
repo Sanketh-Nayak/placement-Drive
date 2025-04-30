@@ -1,10 +1,6 @@
 <?php
 // Database connection
-$conn = new mysqli("localhost", "root", "", "admin_db");
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db.php';
 
 $email = isset($_SESSION['Email']) ? $_SESSION['Email'] : null;
 echo "<script>alert($email);</script>";

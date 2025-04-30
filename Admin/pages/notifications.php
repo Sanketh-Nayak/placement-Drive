@@ -1,10 +1,7 @@
 <?php
 
 // Create connection
-$conn = new mysqli("localhost", "root", "", "admin_db");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 
 // Fetch records
 $sql = "SELECT fullname, email, approval FROM reg_hist ORDER BY id DESC";

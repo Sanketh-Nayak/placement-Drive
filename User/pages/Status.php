@@ -1,8 +1,5 @@
 <?php
-$conn = mysqli_connect('localhost', 'root', '', 'admin_db');
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 $email = $_SESSION['Email'];
 
 $sql = "SELECT a.*, c.name AS company_name, c.role AS company_role

@@ -1,9 +1,6 @@
 <?php
 
-$conn = @mysqli_connect('localhost', 'root', '', 'admin_db');
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 
 if (isset($_POST['sbtn'])) {
     $title = $_POST['bank_name'];

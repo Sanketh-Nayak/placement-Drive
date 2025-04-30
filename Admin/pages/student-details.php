@@ -1,9 +1,6 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "admin_db");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 
 // Query to select all student details
 $query = "SELECT * FROM student_registration ORDER BY id DESC";

@@ -1,11 +1,6 @@
 <?php
 // Connect to the database
-$conn = new mysqli("localhost", "root", "", "admin_db");
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include './db.php';
 
 // Function to handle file upload
 function handleFileUpload($file, $targetDir, $allowedTypes, $maxSize) {

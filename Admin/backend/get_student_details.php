@@ -4,10 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['email'])) {
     $email = $_POST['email'];  // Get the email from the POST request
 
     // Connect to the database
-    $conn = new mysqli("localhost", "root", "", "admin_db");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include './db.php';
 
     // Prepare the query to get student details based on email
     $query = "SELECT * FROM student_registration WHERE email=?";

@@ -2,10 +2,7 @@
 header('Content-Type: application/json');
 
 // Database connection
-$conn = @mysqli_connect('localhost', 'root', '', 'admin_db');
-if ($conn->connect_error) {
-    die(json_encode(['error' => "Connection failed: " . $conn->connect_error]));
-}
+include './db.php';
 
 // Get book_id from request
 $book_id = isset($_GET['book_id']) ? intval($_GET['book_id']) : 0;
